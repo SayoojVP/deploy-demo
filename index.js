@@ -12,6 +12,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'live', message: 'Backend is running on the cloud!' });
 });
 
+app.get('/', (req, res) => {
+  res.send('Server is alive and running on the cloud!');
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
